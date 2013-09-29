@@ -1035,7 +1035,7 @@ status_t AudioPolicyManagerBase::setStreamVolumeIndex(AudioSystem::stream_type s
     status_t status = NO_ERROR;
     for (size_t i = 0; i < mOutputs.size(); i++) {
         audio_devices_t curDevice =
-                getDeviceForVolume(mOutputs.valueAt(i)->device())
+                getDeviceForVolume(mOutputs.valueAt(i)->device());
 #ifndef ICS_AUDIO_BLOB
         if ((device == AUDIO_DEVICE_OUT_DEFAULT) || (device == curDevice))
 #endif
